@@ -38,7 +38,7 @@ with st.sidebar:
 if Path(selected_result).suffix == ".svg":
     with open(Path(selected_benchmark) / Path(selected_result), "r") as file:
         svg_string = file.read()
-        b64 = base64.b64encode(svg_string.encode("utf-8")).decode("utf-8")    
+        b64 = base64.b64encode(svg_string.encode("utf-8")).decode("utf-8")
         css = '<p style="text-align:center; display: flex; justify-content: center;">'
         html = r'{}<img src="data:image/svg+xml;base64,{}"/>'.format(
             css, b64

@@ -1,1 +1,1 @@
-streamlit run orjson_benchmark_visualizer/streamlit_app.py
+web: sh setup.sh && streamlit run orjson_benchmark_visualizer/streamlit_app.py

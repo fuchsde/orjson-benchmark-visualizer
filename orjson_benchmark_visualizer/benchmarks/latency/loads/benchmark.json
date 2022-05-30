@@ -1,0 +1,2105 @@
+{
+    "machine_info": {
+        "node": "fv-az37-767",
+        "processor": "x86_64",
+        "machine": "x86_64",
+        "python_compiler": "GCC 7.5.0",
+        "python_implementation": "CPython",
+        "python_implementation_version": "3.9.12",
+        "python_version": "3.9.12",
+        "python_build": [
+            "main",
+            "Mar 24 2022 17:53:32"
+        ],
+        "release": "5.4.0-1077-azure",
+        "system": "Linux",
+        "cpu": {
+            "python_version": "3.9.12.final.0 (64 bit)",
+            "cpuinfo_version": [
+                8,
+                0,
+                0
+            ],
+            "cpuinfo_version_string": "8.0.0",
+            "arch": "X86_64",
+            "bits": 64,
+            "count": 2,
+            "arch_string_raw": "x86_64",
+            "vendor_id_raw": "GenuineIntel",
+            "brand_raw": "Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz",
+            "hz_advertised_friendly": "2.6000 GHz",
+            "hz_actual_friendly": "2.5939 GHz",
+            "hz_advertised": [
+                2600000000,
+                0
+            ],
+            "hz_actual": [
+                2593905000,
+                0
+            ],
+            "stepping": 7,
+            "model": 85,
+            "family": 6,
+            "flags": [
+                "3dnowprefetch",
+                "abm",
+                "adx",
+                "aes",
+                "apic",
+                "avx",
+                "avx2",
+                "avx512bw",
+                "avx512cd",
+                "avx512dq",
+                "avx512f",
+                "avx512vl",
+                "bmi1",
+                "bmi2",
+                "clflush",
+                "clflushopt",
+                "cmov",
+                "constant_tsc",
+                "cpuid",
+                "cx16",
+                "cx8",
+                "de",
+                "erms",
+                "f16c",
+                "fma",
+                "fpu",
+                "fsgsbase",
+                "fxsr",
+                "hle",
+                "ht",
+                "hypervisor",
+                "invpcid",
+                "invpcid_single",
+                "lahf_lm",
+                "lm",
+                "mca",
+                "mce",
+                "md_clear",
+                "mmx",
+                "movbe",
+                "mpx",
+                "msr",
+                "mtrr",
+                "nopl",
+                "nx",
+                "osxsave",
+                "pae",
+                "pat",
+                "pcid",
+                "pclmulqdq",
+                "pdpe1gb",
+                "pge",
+                "pni",
+                "popcnt",
+                "pse",
+                "pse36",
+                "pti",
+                "rdrand",
+                "rdrnd",
+                "rdseed",
+                "rdtscp",
+                "rep_good",
+                "rtm",
+                "sep",
+                "smap",
+                "smep",
+                "ss",
+                "sse",
+                "sse2",
+                "sse4_1",
+                "sse4_2",
+                "ssse3",
+                "syscall",
+                "tsc",
+                "vme",
+                "xsave",
+                "xsavec",
+                "xsaveopt",
+                "xsaves",
+                "xtopology"
+            ],
+            "l3_cache_size": 37486592,
+            "l2_cache_size": 1048576,
+            "l1_data_cache_size": 32768,
+            "l1_instruction_cache_size": 32768,
+            "l2_cache_line_size": 256,
+            "l2_cache_associativity": 6
+        }
+    },
+    "commit_info": {
+        "id": "56ac64e6913beee15d84c6b15cc83e8752539834",
+        "time": "2022-04-07T18:11:53+02:00",
+        "author_time": "2022-04-07T18:11:53+02:00",
+        "dirty": true,
+        "project": "orjson-benchmark",
+        "branch": "master"
+    },
+    "benchmarks": [
+        {
+            "group": "citm_catalog.json.xz deserialization",
+            "name": "rapidjson 1.6 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-rapidjson-citm_catalog.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "rapidjson",
+                "fixture": "citm_catalog.json.xz"
+            },
+            "param": "bytes-rapidjson-citm_catalog.json.xz",
+            "extra_info": {
+                "lib": "rapidjson",
+                "version": "1.6"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.01038963533000242,
+                "max": 0.010404645509997862,
+                "mean": 0.010397566626000297,
+                "stddev": 6.908119045681034e-06,
+                "rounds": 5,
+                "median": 0.010397174409999934,
+                "iqr": 1.3056414999254584e-05,
+                "q1": 0.010391398602500886,
+                "q3": 0.01040445501750014,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.01038963533000242,
+                "hd15iqr": 0.010404645509997862,
+                "ops": 96.17634932960048,
+                "total": 0.051987833130001486,
+                "data": [
+                    0.01038963533000242,
+                    0.010391986360000374,
+                    0.010404391520000899,
+                    0.010397174409999934,
+                    0.010404645509997862
+                ],
+                "iterations": 100
+            }
+        },
+        {
+            "group": "github.json.xz deserialization",
+            "name": "rapidjson 1.6 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-rapidjson-github.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "rapidjson",
+                "fixture": "github.json.xz"
+            },
+            "param": "bytes-rapidjson-github.json.xz",
+            "extra_info": {
+                "lib": "rapidjson",
+                "version": "1.6"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.000402068730100018,
+                "max": 0.0004036821015999976,
+                "mean": 0.0004024768126799972,
+                "stddev": 6.780795917218974e-07,
+                "rounds": 5,
+                "median": 0.00040217715439998757,
+                "iqr": 4.87815899998629e-07,
+                "q1": 0.00040214597499999623,
+                "q3": 0.00040263379089999486,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.000402068730100018,
+                "hd15iqr": 0.0004036821015999976,
+                "ops": 2484.6151840182747,
+                "total": 0.002012384063399986,
+                "data": [
+                    0.00040217715439998757,
+                    0.000402171723299989,
+                    0.00040228435399999396,
+                    0.000402068730100018,
+                    0.0004036821015999976
+                ],
+                "iterations": 10000
+            }
+        },
+        {
+            "group": "citm_catalog.json.xz deserialization",
+            "name": "ujson 5.2.0 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-ujson-citm_catalog.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "ujson",
+                "fixture": "citm_catalog.json.xz"
+            },
+            "param": "bytes-ujson-citm_catalog.json.xz",
+            "extra_info": {
+                "lib": "ujson",
+                "version": "5.2.0"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.009166694759259101,
+                "max": 0.009185906148146657,
+                "mean": 0.00917512172592507,
+                "stddev": 9.493300251830149e-06,
+                "rounds": 5,
+                "median": 0.0091702559074065,
+                "iqr": 1.763426388905545e-05,
+                "q1": 0.0091675399120361,
+                "q3": 0.009185174175925155,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.009166694759259101,
+                "hd15iqr": 0.009185906148146657,
+                "ops": 108.99037962345686,
+                "total": 0.04587560862962534,
+                "data": [
+                    0.009185906148146657,
+                    0.009167821629628432,
+                    0.009166694759259101,
+                    0.0091702559074065,
+                    0.009184930185184655
+                ],
+                "iterations": 108
+            }
+        },
+        {
+            "group": "twitter.json.xz deserialization",
+            "name": "simplejson 3.17.6 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-simplejson-twitter.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "simplejson",
+                "fixture": "twitter.json.xz"
+            },
+            "param": "string-simplejson-twitter.json.xz",
+            "extra_info": {
+                "lib": "simplejson",
+                "version": "3.17.6"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0042377892290001,
+                "max": 0.004403789850000067,
+                "mean": 0.004324487350399977,
+                "stddev": 7.263204268233536e-05,
+                "rounds": 5,
+                "median": 0.004342512589999842,
+                "iqr": 0.00012969964599994846,
+                "q1": 0.004254726968,
+                "q3": 0.004384426613999948,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.0042377892290001,
+                "hd15iqr": 0.004403789850000067,
+                "ops": 231.24128225453333,
+                "total": 0.021622436751999884,
+                "data": [
+                    0.004260372880999967,
+                    0.00437797220199991,
+                    0.004403789850000067,
+                    0.004342512589999842,
+                    0.0042377892290001
+                ],
+                "iterations": 1000
+            }
+        },
+        {
+            "group": "twitter.json.xz deserialization",
+            "name": "rapidjson 1.6 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-rapidjson-twitter.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "rapidjson",
+                "fixture": "twitter.json.xz"
+            },
+            "param": "string-rapidjson-twitter.json.xz",
+            "extra_info": {
+                "lib": "rapidjson",
+                "version": "1.6"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.004738475032000224,
+                "max": 0.004804810116999761,
+                "mean": 0.004767298000199935,
+                "stddev": 2.536167530325664e-05,
+                "rounds": 5,
+                "median": 0.004769973257999936,
+                "iqr": 3.379145925032356e-05,
+                "q1": 0.004747226761749743,
+                "q3": 0.004781018221000067,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.004738475032000224,
+                "hd15iqr": 0.004804810116999761,
+                "ops": 209.76242726132523,
+                "total": 0.023836490000999674,
+                "data": [
+                    0.004750144004999584,
+                    0.004738475032000224,
+                    0.004769973257999936,
+                    0.0047730875890001695,
+                    0.004804810116999761
+                ],
+                "iterations": 1000
+            }
+        },
+        {
+            "group": "canada.json.xz deserialization",
+            "name": "rapidjson 1.6 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-rapidjson-canada.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "rapidjson",
+                "fixture": "canada.json.xz"
+            },
+            "param": "bytes-rapidjson-canada.json.xz",
+            "extra_info": {
+                "lib": "rapidjson",
+                "version": "1.6"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.04351117578999947,
+                "max": 0.04419678255000235,
+                "mean": 0.04387244637200001,
+                "stddev": 0.0002939812343485227,
+                "rounds": 5,
+                "median": 0.04400324097000066,
+                "iqr": 0.0004868966225012594,
+                "q1": 0.04358918368749869,
+                "q3": 0.044076080309999946,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.04351117578999947,
+                "hd15iqr": 0.04419678255000235,
+                "ops": 22.79334941846811,
+                "total": 0.2193622318600001,
+                "data": [
+                    0.04400324097000066,
+                    0.04419678255000235,
+                    0.04403584622999915,
+                    0.04361518631999843,
+                    0.04351117578999947
+                ],
+                "iterations": 100
+            }
+        },
+        {
+            "group": "citm_catalog.json.xz deserialization",
+            "name": "json 2.0.9 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-json-citm_catalog.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "json",
+                "fixture": "citm_catalog.json.xz"
+            },
+            "param": "string-json-citm_catalog.json.xz",
+            "extra_info": {
+                "lib": "json",
+                "version": "2.0.9"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.010353962170001977,
+                "max": 0.010367826380002044,
+                "mean": 0.010358472240000083,
+                "stddev": 5.6640499890109024e-06,
+                "rounds": 5,
+                "median": 0.010357471219999753,
+                "iqr": 7.155355001486549e-06,
+                "q1": 0.0103540589274985,
+                "q3": 0.010361214282499986,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.010353962170001977,
+                "hd15iqr": 0.010367826380002044,
+                "ops": 96.53933290842048,
+                "total": 0.051792361200000414,
+                "data": [
+                    0.010359010249999301,
+                    0.010367826380002044,
+                    0.010357471219999753,
+                    0.01035409117999734,
+                    0.010353962170001977
+                ],
+                "iterations": 100
+            }
+        },
+        {
+            "group": "twitter.json.xz deserialization",
+            "name": "orjson 3.6.8 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-orjson-twitter.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "orjson",
+                "fixture": "twitter.json.xz"
+            },
+            "param": "bytes-orjson-twitter.json.xz",
+            "extra_info": {
+                "lib": "orjson",
+                "version": "3.6.8"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.002822378311000193,
+                "max": 0.0030203415509995465,
+                "mean": 0.0029479003658000693,
+                "stddev": 7.776134324167779e-05,
+                "rounds": 5,
+                "median": 0.0029483650600000146,
+                "iqr": 9.448265374976473e-05,
+                "q1": 0.002913754996000307,
+                "q3": 0.003008237649750072,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.002822378311000193,
+                "hd15iqr": 0.0030203415509995465,
+                "ops": 339.2244906243963,
+                "total": 0.014739501829000346,
+                "data": [
+                    0.0029483650600000146,
+                    0.0030203415509995465,
+                    0.002822378311000193,
+                    0.002944213891000345,
+                    0.0030042030160002467
+                ],
+                "iterations": 1000
+            }
+        },
+        {
+            "group": "canada.json.xz deserialization",
+            "name": "ujson 5.2.0 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-ujson-canada.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "ujson",
+                "fixture": "canada.json.xz"
+            },
+            "param": "string-ujson-canada.json.xz",
+            "extra_info": {
+                "lib": "ujson",
+                "version": "5.2.0"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.020992781990003095,
+                "max": 0.021385178479999923,
+                "mean": 0.02122888148600214,
+                "stddev": 0.00015525964178479942,
+                "rounds": 5,
+                "median": 0.02127841897000053,
+                "iqr": 0.00022059758999944112,
+                "q1": 0.021119956760003333,
+                "q3": 0.021340554350002774,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.020992781990003095,
+                "hd15iqr": 0.021385178479999923,
+                "ops": 47.10563769736895,
+                "total": 0.10614440743001069,
+                "data": [
+                    0.021385178479999923,
+                    0.021325679640003727,
+                    0.02127841897000053,
+                    0.021162348350003413,
+                    0.020992781990003095
+                ],
+                "iterations": 100
+            }
+        },
+        {
+            "group": "citm_catalog.json.xz deserialization",
+            "name": "ujson 5.2.0 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-ujson-citm_catalog.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "ujson",
+                "fixture": "citm_catalog.json.xz"
+            },
+            "param": "string-ujson-citm_catalog.json.xz",
+            "extra_info": {
+                "lib": "ujson",
+                "version": "5.2.0"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00737284300735088,
+                "max": 0.008140895529413014,
+                "mean": 0.007599858345587804,
+                "stddev": 0.00030729220946015075,
+                "rounds": 5,
+                "median": 0.007486012948528,
+                "iqr": 0.0002147798051448241,
+                "q1": 0.007456655005515747,
+                "q3": 0.007671434810660571,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.00737284300735088,
+                "hd15iqr": 0.008140895529413014,
+                "ops": 131.58139987971788,
+                "total": 0.03799929172793902,
+                "data": [
+                    0.008140895529413014,
+                    0.00737284300735088,
+                    0.007484592338237369,
+                    0.007486012948528,
+                    0.007514947904409756
+                ],
+                "iterations": 136
+            }
+        },
+        {
+            "group": "github.json.xz deserialization",
+            "name": "simplejson 3.17.6 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-simplejson-github.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "simplejson",
+                "fixture": "github.json.xz"
+            },
+            "param": "string-simplejson-github.json.xz",
+            "extra_info": {
+                "lib": "simplejson",
+                "version": "3.17.6"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0003425514298000053,
+                "max": 0.00034447999459998757,
+                "mean": 0.00034334509782000166,
+                "stddev": 7.623711096174598e-07,
+                "rounds": 5,
+                "median": 0.0003430348760000015,
+                "iqr": 1.0729021749739608e-06,
+                "q1": 0.0003428396727250174,
+                "q3": 0.00034391257489999136,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.0003425514298000053,
+                "hd15iqr": 0.00034447999459998757,
+                "ops": 2912.521560229903,
+                "total": 0.0017167254891000084,
+                "data": [
+                    0.0003425514298000053,
+                    0.0003430348760000015,
+                    0.0003437234349999926,
+                    0.00034293575370002144,
+                    0.00034447999459998757
+                ],
+                "iterations": 10000
+            }
+        },
+        {
+            "group": "citm_catalog.json.xz deserialization",
+            "name": "json 2.0.9 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-json-citm_catalog.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "json",
+                "fixture": "citm_catalog.json.xz"
+            },
+            "param": "bytes-json-citm_catalog.json.xz",
+            "extra_info": {
+                "lib": "json",
+                "version": "2.0.9"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.010393604430000779,
+                "max": 0.010426704880001126,
+                "mean": 0.010411281072001658,
+                "stddev": 1.508054805322508e-05,
+                "rounds": 5,
+                "median": 0.010413817700000437,
+                "iqr": 2.8199139999289524e-05,
+                "q1": 0.010396793475002823,
+                "q3": 0.010424992615002113,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.010393604430000779,
+                "hd15iqr": 0.010426704880001126,
+                "ops": 96.04965931514722,
+                "total": 0.05205640536000829,
+                "data": [
+                    0.01042442186000244,
+                    0.010393604430000779,
+                    0.010397856490003505,
+                    0.010426704880001126,
+                    0.010413817700000437
+                ],
+                "iterations": 100
+            }
+        },
+        {
+            "group": "github.json.xz deserialization",
+            "name": "ujson 5.2.0 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-ujson-github.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "ujson",
+                "fixture": "github.json.xz"
+            },
+            "param": "bytes-ujson-github.json.xz",
+            "extra_info": {
+                "lib": "ujson",
+                "version": "5.2.0"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0003341103890999875,
+                "max": 0.0003373740444999839,
+                "mean": 0.00033480925631999527,
+                "stddev": 1.4341967527891533e-06,
+                "rounds": 5,
+                "median": 0.00033417975970000954,
+                "iqr": 8.39367024991545e-07,
+                "q1": 0.0003341591537999989,
+                "q3": 0.00033499852082499043,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0003341103890999875,
+                "hd15iqr": 0.0003373740444999839,
+                "ops": 2986.7752492608693,
+                "total": 0.0016740462815999762,
+                "data": [
+                    0.0003373740444999839,
+                    0.0003341103890999875,
+                    0.00033417975970000954,
+                    0.00033420667959999263,
+                    0.00033417540870000264
+                ],
+                "iterations": 10000
+            }
+        },
+        {
+            "group": "twitter.json.xz deserialization",
+            "name": "ujson 5.2.0 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-ujson-twitter.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "ujson",
+                "fixture": "twitter.json.xz"
+            },
+            "param": "bytes-ujson-twitter.json.xz",
+            "extra_info": {
+                "lib": "ujson",
+                "version": "5.2.0"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0039934062419997645,
+                "max": 0.004304531437000151,
+                "mean": 0.0041752865359999305,
+                "stddev": 0.000131796896263613,
+                "rounds": 5,
+                "median": 0.00421787805599979,
+                "iqr": 0.00021942024100019258,
+                "q1": 0.004062763443749873,
+                "q3": 0.004282183684750066,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.0039934062419997645,
+                "hd15iqr": 0.004304531437000151,
+                "ops": 239.50452055873384,
+                "total": 0.020876432679999654,
+                "data": [
+                    0.00421787805599979,
+                    0.004274734434000038,
+                    0.004304531437000151,
+                    0.0039934062419997645,
+                    0.004085882510999909
+                ],
+                "iterations": 1000
+            }
+        },
+        {
+            "group": "canada.json.xz deserialization",
+            "name": "json 2.0.9 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-json-canada.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "json",
+                "fixture": "canada.json.xz"
+            },
+            "param": "string-json-canada.json.xz",
+            "extra_info": {
+                "lib": "json",
+                "version": "2.0.9"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.04022737004999726,
+                "max": 0.040452665379998504,
+                "mean": 0.040348146627999994,
+                "stddev": 9.589845009811605e-05,
+                "rounds": 5,
+                "median": 0.04033879269999943,
+                "iqr": 0.00016685369500237662,
+                "q1": 0.040272291960000074,
+                "q3": 0.04043914565500245,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.04022737004999726,
+                "hd15iqr": 0.040452665379998504,
+                "ops": 24.784285861250446,
+                "total": 0.20174073313999996,
+                "data": [
+                    0.040452665379998504,
+                    0.04043463908000376,
+                    0.04033879269999943,
+                    0.04028726593000101,
+                    0.04022737004999726
+                ],
+                "iterations": 100
+            }
+        },
+        {
+            "group": "twitter.json.xz deserialization",
+            "name": "json 2.0.9 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-json-twitter.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "json",
+                "fixture": "twitter.json.xz"
+            },
+            "param": "bytes-json-twitter.json.xz",
+            "extra_info": {
+                "lib": "json",
+                "version": "2.0.9"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.004304012538999814,
+                "max": 0.004596321389999957,
+                "mean": 0.004436437754999861,
+                "stddev": 0.00010840058790434687,
+                "rounds": 5,
+                "median": 0.004418158415999642,
+                "iqr": 0.00013607072374998037,
+                "q1": 0.00436839254049994,
+                "q3": 0.004504463264249921,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.004304012538999814,
+                "hd15iqr": 0.004596321389999957,
+                "ops": 225.4060701906616,
+                "total": 0.022182188774999306,
+                "data": [
+                    0.004596321389999957,
+                    0.004389852540999982,
+                    0.004473843888999909,
+                    0.004418158415999642,
+                    0.004304012538999814
+                ],
+                "iterations": 1000
+            }
+        },
+        {
+            "group": "github.json.xz deserialization",
+            "name": "orjson 3.6.8 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-orjson-github.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "orjson",
+                "fixture": "github.json.xz"
+            },
+            "param": "bytes-orjson-github.json.xz",
+            "extra_info": {
+                "lib": "orjson",
+                "version": "3.6.8"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.000219624611800009,
+                "max": 0.0002212558349000119,
+                "mean": 0.0002203286398000091,
+                "stddev": 7.185710599310762e-07,
+                "rounds": 5,
+                "median": 0.00022013335910000932,
+                "iqr": 1.2769699750265475e-06,
+                "q1": 0.0002197075932999951,
+                "q3": 0.00022098456327502165,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.000219624611800009,
+                "hd15iqr": 0.0002212558349000119,
+                "ops": 4538.674594949133,
+                "total": 0.0011016431990000456,
+                "data": [
+                    0.0002212558349000119,
+                    0.00021973525379999045,
+                    0.00022013335910000932,
+                    0.00022089413940002488,
+                    0.000219624611800009
+                ],
+                "iterations": 10000
+            }
+        },
+        {
+            "group": "twitter.json.xz deserialization",
+            "name": "simplejson 3.17.6 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-simplejson-twitter.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "simplejson",
+                "fixture": "twitter.json.xz"
+            },
+            "param": "bytes-simplejson-twitter.json.xz",
+            "extra_info": {
+                "lib": "simplejson",
+                "version": "3.17.6"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.004222610576000079,
+                "max": 0.004458558808999896,
+                "mean": 0.004324514797600022,
+                "stddev": 9.862754542195435e-05,
+                "rounds": 5,
+                "median": 0.004333455707000212,
+                "iqr": 0.00016309155224962513,
+                "q1": 0.004231581233000156,
+                "q3": 0.0043946727852497815,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.004222610576000079,
+                "hd15iqr": 0.004458558808999896,
+                "ops": 231.2398145926036,
+                "total": 0.021622573988000115,
+                "data": [
+                    0.004234571452000182,
+                    0.004333455707000212,
+                    0.004222610576000079,
+                    0.0043733774439997436,
+                    0.004458558808999896
+                ],
+                "iterations": 1000
+            }
+        },
+        {
+            "group": "citm_catalog.json.xz deserialization",
+            "name": "orjson 3.6.8 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-orjson-citm_catalog.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "orjson",
+                "fixture": "citm_catalog.json.xz"
+            },
+            "param": "string-orjson-citm_catalog.json.xz",
+            "extra_info": {
+                "lib": "orjson",
+                "version": "3.6.8"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.005373170632432251,
+                "max": 0.00548239429189306,
+                "mean": 0.005396108567567992,
+                "stddev": 4.824212681001447e-05,
+                "rounds": 5,
+                "median": 0.00537500092973091,
+                "iqr": 2.7766463514077196e-05,
+                "q1": 0.0053743037527025275,
+                "q3": 0.005402070216216605,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.005373170632432251,
+                "hd15iqr": 0.00548239429189306,
+                "ops": 185.3187324677377,
+                "total": 0.02698054283783996,
+                "data": [
+                    0.00537500092973091,
+                    0.005373170632432251,
+                    0.005374681459459287,
+                    0.00548239429189306,
+                    0.005375295524324453
+                ],
+                "iterations": 185
+            }
+        },
+        {
+            "group": "github.json.xz deserialization",
+            "name": "orjson 3.6.8 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-orjson-github.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "orjson",
+                "fixture": "github.json.xz"
+            },
+            "param": "string-orjson-github.json.xz",
+            "extra_info": {
+                "lib": "orjson",
+                "version": "3.6.8"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0002193637955000213,
+                "max": 0.0002253183471000284,
+                "mean": 0.0002227715660600097,
+                "stddev": 2.265752620275286e-06,
+                "rounds": 5,
+                "median": 0.00022270803100000195,
+                "iqr": 2.990188225010092e-06,
+                "q1": 0.000221515544975,
+                "q3": 0.0002245057332000101,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.0002193637955000213,
+                "hd15iqr": 0.0002253183471000284,
+                "ops": 4488.903219051853,
+                "total": 0.0011138578303000485,
+                "data": [
+                    0.0002193637955000213,
+                    0.0002222327947999929,
+                    0.0002253183471000284,
+                    0.00022270803100000195,
+                    0.00022423486190000403
+                ],
+                "iterations": 10000
+            }
+        },
+        {
+            "group": "citm_catalog.json.xz deserialization",
+            "name": "simplejson 3.17.6 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-simplejson-citm_catalog.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "simplejson",
+                "fixture": "citm_catalog.json.xz"
+            },
+            "param": "string-simplejson-citm_catalog.json.xz",
+            "extra_info": {
+                "lib": "simplejson",
+                "version": "3.17.6"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.009491313295239664,
+                "max": 0.009919977276188418,
+                "mean": 0.009639655140952181,
+                "stddev": 0.00016902022401444518,
+                "rounds": 5,
+                "median": 0.009607667266668398,
+                "iqr": 0.00020001512380834682,
+                "q1": 0.009518647959523497,
+                "q3": 0.009718663083331844,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.009491313295239664,
+                "hd15iqr": 0.009919977276188418,
+                "ops": 103.73815093775467,
+                "total": 0.0481982757047609,
+                "data": [
+                    0.009527759514284775,
+                    0.009491313295239664,
+                    0.009651558352379653,
+                    0.009919977276188418,
+                    0.009607667266668398
+                ],
+                "iterations": 105
+            }
+        },
+        {
+            "group": "canada.json.xz deserialization",
+            "name": "json 2.0.9 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-json-canada.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "json",
+                "fixture": "canada.json.xz"
+            },
+            "param": "bytes-json-canada.json.xz",
+            "extra_info": {
+                "lib": "json",
+                "version": "2.0.9"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.040083943650001855,
+                "max": 0.04015014861000054,
+                "mean": 0.04011880673000087,
+                "stddev": 2.5288169860519377e-05,
+                "rounds": 5,
+                "median": 0.04011850703000164,
+                "iqr": 3.6474405001173105e-05,
+                "q1": 0.04010156221499983,
+                "q3": 0.040138036620001004,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.040083943650001855,
+                "hd15iqr": 0.04015014861000054,
+                "ops": 24.92596568811204,
+                "total": 0.20059403365000433,
+                "data": [
+                    0.040107435069999156,
+                    0.04015014861000054,
+                    0.040083943650001855,
+                    0.04013399929000116,
+                    0.04011850703000164
+                ],
+                "iterations": 100
+            }
+        },
+        {
+            "group": "canada.json.xz deserialization",
+            "name": "rapidjson 1.6 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-rapidjson-canada.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "rapidjson",
+                "fixture": "canada.json.xz"
+            },
+            "param": "string-rapidjson-canada.json.xz",
+            "extra_info": {
+                "lib": "rapidjson",
+                "version": "1.6"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.04101788219999889,
+                "max": 0.0412212978999969,
+                "mean": 0.04109695128599924,
+                "stddev": 7.998867453226564e-05,
+                "rounds": 5,
+                "median": 0.041080956159999,
+                "iqr": 0.0001107993175026023,
+                "q1": 0.041036230417498695,
+                "q3": 0.0411470297350013,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.04101788219999889,
+                "hd15iqr": 0.0412212978999969,
+                "ops": 24.33270519364964,
+                "total": 0.2054847564299962,
+                "data": [
+                    0.041080956159999,
+                    0.04112227368000276,
+                    0.04101788219999889,
+                    0.04104234648999863,
+                    0.0412212978999969
+                ],
+                "iterations": 100
+            }
+        },
+        {
+            "group": "twitter.json.xz deserialization",
+            "name": "orjson 3.6.8 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-orjson-twitter.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "orjson",
+                "fixture": "twitter.json.xz"
+            },
+            "param": "string-orjson-twitter.json.xz",
+            "extra_info": {
+                "lib": "orjson",
+                "version": "3.6.8"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0028071872270002134,
+                "max": 0.003119902422999985,
+                "mean": 0.002953881442399961,
+                "stddev": 0.00012328986574394065,
+                "rounds": 5,
+                "median": 0.0029487932769998223,
+                "iqr": 0.00019237672024962618,
+                "q1": 0.002854769453000131,
+                "q3": 0.003047146173249757,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.0028071872270002134,
+                "hd15iqr": 0.003119902422999985,
+                "ops": 338.53762227759654,
+                "total": 0.014769407211999805,
+                "data": [
+                    0.0029487932769998223,
+                    0.003119902422999985,
+                    0.0030228940899996812,
+                    0.0028071872270002134,
+                    0.0028706301950001036
+                ],
+                "iterations": 1000
+            }
+        },
+        {
+            "group": "canada.json.xz deserialization",
+            "name": "simplejson 3.17.6 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-simplejson-canada.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "simplejson",
+                "fixture": "canada.json.xz"
+            },
+            "param": "string-simplejson-canada.json.xz",
+            "extra_info": {
+                "lib": "simplejson",
+                "version": "3.17.6"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.039851609580000516,
+                "max": 0.040687668900000064,
+                "mean": 0.04040969736600073,
+                "stddev": 0.00033215388979552043,
+                "rounds": 5,
+                "median": 0.04045485851000194,
+                "iqr": 0.0003696381299994264,
+                "q1": 0.04027797193500078,
+                "q3": 0.04064761006500021,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.039851609580000516,
+                "hd15iqr": 0.040687668900000064,
+                "ops": 24.746535242339235,
+                "total": 0.20204848683000365,
+                "data": [
+                    0.04045485851000194,
+                    0.039851609580000516,
+                    0.040687668900000064,
+                    0.04063425712000026,
+                    0.04042009272000087
+                ],
+                "iterations": 100
+            }
+        },
+        {
+            "group": "twitter.json.xz deserialization",
+            "name": "json 2.0.9 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-json-twitter.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "json",
+                "fixture": "twitter.json.xz"
+            },
+            "param": "string-json-twitter.json.xz",
+            "extra_info": {
+                "lib": "json",
+                "version": "2.0.9"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.004321942149999813,
+                "max": 0.004450675271000364,
+                "mean": 0.004385851913599982,
+                "stddev": 5.8582507658984256e-05,
+                "rounds": 5,
+                "median": 0.004371429540999998,
+                "iqr": 0.00010823983975001214,
+                "q1": 0.0043369119849999156,
+                "q3": 0.004445151824749928,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.004321942149999813,
+                "hd15iqr": 0.004450675271000364,
+                "ops": 228.00587427476165,
+                "total": 0.021929259567999904,
+                "data": [
+                    0.004371429540999998,
+                    0.004321942149999813,
+                    0.004450675271000364,
+                    0.004443310675999783,
+                    0.004341901929999949
+                ],
+                "iterations": 1000
+            }
+        },
+        {
+            "group": "github.json.xz deserialization",
+            "name": "simplejson 3.17.6 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-simplejson-github.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "simplejson",
+                "fixture": "github.json.xz"
+            },
+            "param": "bytes-simplejson-github.json.xz",
+            "extra_info": {
+                "lib": "simplejson",
+                "version": "3.17.6"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00034414685779993306,
+                "max": 0.00034957446670005085,
+                "mean": 0.00034684644947998095,
+                "stddev": 2.538680754740956e-06,
+                "rounds": 5,
+                "median": 0.0003463123959999393,
+                "iqr": 4.816131799952939e-06,
+                "q1": 0.0003446315472500146,
+                "q3": 0.00034944767904996753,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.00034414685779993306,
+                "hd15iqr": 0.00034957446670005085,
+                "ops": 2883.120186178285,
+                "total": 0.0017342322473999049,
+                "data": [
+                    0.00034957446670005085,
+                    0.0003463123959999393,
+                    0.00034414685779993306,
+                    0.00034940541649993974,
+                    0.0003447931104000418
+                ],
+                "iterations": 10000
+            }
+        },
+        {
+            "group": "github.json.xz deserialization",
+            "name": "rapidjson 1.6 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-rapidjson-github.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "rapidjson",
+                "fixture": "github.json.xz"
+            },
+            "param": "string-rapidjson-github.json.xz",
+            "extra_info": {
+                "lib": "rapidjson",
+                "version": "1.6"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00039569433059996297,
+                "max": 0.00039880321090004145,
+                "mean": 0.00039655865347998766,
+                "stddev": 1.3005753939429055e-06,
+                "rounds": 5,
+                "median": 0.00039589782159991954,
+                "iqr": 1.3438791999078681e-06,
+                "q1": 0.00039578946720005204,
+                "q3": 0.0003971333463999599,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.00039569433059996297,
+                "hd15iqr": 0.00039880321090004145,
+                "ops": 2521.6950663528132,
+                "total": 0.0019827932673999386,
+                "data": [
+                    0.00039582117940008174,
+                    0.0003965767248999327,
+                    0.00039880321090004145,
+                    0.00039569433059996297,
+                    0.00039589782159991954
+                ],
+                "iterations": 10000
+            }
+        },
+        {
+            "group": "citm_catalog.json.xz deserialization",
+            "name": "orjson 3.6.8 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-orjson-citm_catalog.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "orjson",
+                "fixture": "citm_catalog.json.xz"
+            },
+            "param": "bytes-orjson-citm_catalog.json.xz",
+            "extra_info": {
+                "lib": "orjson",
+                "version": "3.6.8"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.005359898310163703,
+                "max": 0.005606419213906525,
+                "mean": 0.0054601362128345555,
+                "stddev": 9.714175807159805e-05,
+                "rounds": 5,
+                "median": 0.005427131866309795,
+                "iqr": 0.00013756500267364264,
+                "q1": 0.00539221906684424,
+                "q3": 0.005529784069517883,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.005359898310163703,
+                "hd15iqr": 0.005606419213906525,
+                "ops": 183.14561414226395,
+                "total": 0.02730068106417278,
+                "data": [
+                    0.00540299265240442,
+                    0.005359898310163703,
+                    0.005504239021388336,
+                    0.005606419213906525,
+                    0.005427131866309795
+                ],
+                "iterations": 187
+            }
+        },
+        {
+            "group": "canada.json.xz deserialization",
+            "name": "orjson 3.6.8 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-orjson-canada.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "orjson",
+                "fixture": "canada.json.xz"
+            },
+            "param": "bytes-orjson-canada.json.xz",
+            "extra_info": {
+                "lib": "orjson",
+                "version": "3.6.8"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.014145887929998935,
+                "max": 0.014404365499995037,
+                "mean": 0.014252187853997384,
+                "stddev": 0.00010948747469109054,
+                "rounds": 5,
+                "median": 0.014257761819999359,
+                "iqr": 0.00018147320250136607,
+                "q1": 0.01414789158499616,
+                "q3": 0.014329364787497526,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.014145887929998935,
+                "hd15iqr": 0.014404365499995037,
+                "ops": 70.16466596176144,
+                "total": 0.07126093926998692,
+                "data": [
+                    0.014304364549998354,
+                    0.014257761819999359,
+                    0.014148559469995235,
+                    0.014145887929998935,
+                    0.014404365499995037
+                ],
+                "iterations": 100
+            }
+        },
+        {
+            "group": "citm_catalog.json.xz deserialization",
+            "name": "rapidjson 1.6 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-rapidjson-citm_catalog.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "rapidjson",
+                "fixture": "citm_catalog.json.xz"
+            },
+            "param": "string-rapidjson-citm_catalog.json.xz",
+            "extra_info": {
+                "lib": "rapidjson",
+                "version": "1.6"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.008940180814155674,
+                "max": 0.009191370955745013,
+                "mean": 0.009036364292032644,
+                "stddev": 9.98304357986673e-05,
+                "rounds": 5,
+                "median": 0.00903954671681695,
+                "iqr": 0.00013515338053294267,
+                "q1": 0.00895288839601321,
+                "q3": 0.009088041776546152,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.008940180814155674,
+                "hd15iqr": 0.009191370955745013,
+                "ops": 110.66397587375924,
+                "total": 0.04518182146016322,
+                "data": [
+                    0.00903954671681695,
+                    0.009191370955745013,
+                    0.008940180814155674,
+                    0.009053598716813197,
+                    0.008957124256632388
+                ],
+                "iterations": 113
+            }
+        },
+        {
+            "group": "citm_catalog.json.xz deserialization",
+            "name": "simplejson 3.17.6 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-simplejson-citm_catalog.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "simplejson",
+                "fixture": "citm_catalog.json.xz"
+            },
+            "param": "bytes-simplejson-citm_catalog.json.xz",
+            "extra_info": {
+                "lib": "simplejson",
+                "version": "3.17.6"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00946647303773613,
+                "max": 0.00988713459433574,
+                "mean": 0.009610864413207309,
+                "stddev": 0.0001997605658446036,
+                "rounds": 5,
+                "median": 0.009472887160376009,
+                "iqr": 0.0003260954150983656,
+                "q1": 0.009466588474055551,
+                "q3": 0.009792683889153917,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.00946647303773613,
+                "hd15iqr": 0.00988713459433574,
+                "ops": 104.04891350103678,
+                "total": 0.04805432206603655,
+                "data": [
+                    0.00946647303773613,
+                    0.009472887160376009,
+                    0.009761200320759977,
+                    0.00988713459433574,
+                    0.009466626952828692
+                ],
+                "iterations": 106
+            }
+        },
+        {
+            "group": "twitter.json.xz deserialization",
+            "name": "ujson 5.2.0 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-ujson-twitter.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "ujson",
+                "fixture": "twitter.json.xz"
+            },
+            "param": "string-ujson-twitter.json.xz",
+            "extra_info": {
+                "lib": "ujson",
+                "version": "5.2.0"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00406163424999977,
+                "max": 0.0043792122569993805,
+                "mean": 0.004192428605999521,
+                "stddev": 0.00011663680909215906,
+                "rounds": 5,
+                "median": 0.0041684641619995095,
+                "iqr": 0.00011813684750040972,
+                "q1": 0.004128349524999293,
+                "q3": 0.004246486372499703,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.00406163424999977,
+                "hd15iqr": 0.0043792122569993805,
+                "ops": 238.52523059521226,
+                "total": 0.020962143029997604,
+                "data": [
+                    0.0042022444109998105,
+                    0.0041684641619995095,
+                    0.0043792122569993805,
+                    0.00406163424999977,
+                    0.004150587949999135
+                ],
+                "iterations": 1000
+            }
+        },
+        {
+            "group": "github.json.xz deserialization",
+            "name": "json 2.0.9 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-json-github.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "json",
+                "fixture": "github.json.xz"
+            },
+            "param": "bytes-json-github.json.xz",
+            "extra_info": {
+                "lib": "json",
+                "version": "2.0.9"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0003031476985000154,
+                "max": 0.00030620793369998865,
+                "mean": 0.00030407681671998946,
+                "stddev": 1.2132181872990214e-06,
+                "rounds": 5,
+                "median": 0.00030368001709994133,
+                "iqr": 7.994357249799721e-07,
+                "q1": 0.0003035253990250112,
+                "q3": 0.00030432483474999116,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0003031476985000154,
+                "hd15iqr": 0.00030620793369998865,
+                "ops": 3288.6426883403433,
+                "total": 0.0015203840835999473,
+                "data": [
+                    0.00030620793369998865,
+                    0.0003036512992000098,
+                    0.0003031476985000154,
+                    0.00030369713509999203,
+                    0.00030368001709994133
+                ],
+                "iterations": 10000
+            }
+        },
+        {
+            "group": "canada.json.xz deserialization",
+            "name": "simplejson 3.17.6 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-simplejson-canada.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "simplejson",
+                "fixture": "canada.json.xz"
+            },
+            "param": "bytes-simplejson-canada.json.xz",
+            "extra_info": {
+                "lib": "simplejson",
+                "version": "3.17.6"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.040047091469996306,
+                "max": 0.040229447969995814,
+                "mean": 0.040119908001999646,
+                "stddev": 6.680136228613432e-05,
+                "rounds": 5,
+                "median": 0.04010629987999891,
+                "iqr": 5.598663750333577e-05,
+                "q1": 0.040087836870000046,
+                "q3": 0.04014382350750338,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.040047091469996306,
+                "hd15iqr": 0.040229447969995814,
+                "ops": 24.925281482454004,
+                "total": 0.20059954000999825,
+                "data": [
+                    0.04011528202000591,
+                    0.0401014186700013,
+                    0.040229447969995814,
+                    0.04010629987999891,
+                    0.040047091469996306
+                ],
+                "iterations": 100
+            }
+        },
+        {
+            "group": "github.json.xz deserialization",
+            "name": "json 2.0.9 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-json-github.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "json",
+                "fixture": "github.json.xz"
+            },
+            "param": "string-json-github.json.xz",
+            "extra_info": {
+                "lib": "json",
+                "version": "2.0.9"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0003037870961000408,
+                "max": 0.00030590757310001206,
+                "mean": 0.00030494549160002863,
+                "stddev": 9.574881547732673e-07,
+                "rounds": 5,
+                "median": 0.00030492237090002164,
+                "iqr": 1.773872974968082e-06,
+                "q1": 0.0003041163038750483,
+                "q3": 0.00030589017685001636,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.0003037870961000408,
+                "hd15iqr": 0.00030590757310001206,
+                "ops": 3279.274583641381,
+                "total": 0.001524727458000143,
+                "data": [
+                    0.0003058843781000178,
+                    0.0003042260398000508,
+                    0.00030492237090002164,
+                    0.0003037870961000408,
+                    0.00030590757310001206
+                ],
+                "iterations": 10000
+            }
+        },
+        {
+            "group": "github.json.xz deserialization",
+            "name": "ujson 5.2.0 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-ujson-github.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "ujson",
+                "fixture": "github.json.xz"
+            },
+            "param": "string-ujson-github.json.xz",
+            "extra_info": {
+                "lib": "ujson",
+                "version": "5.2.0"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0003304209308999816,
+                "max": 0.0003342311236999194,
+                "mean": 0.00033248702681996293,
+                "stddev": 1.827900115120606e-06,
+                "rounds": 5,
+                "median": 0.00033330505899994024,
+                "iqr": 3.385612924944369e-06,
+                "q1": 0.0003305679580500054,
+                "q3": 0.0003339535709749498,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.0003304209308999816,
+                "hd15iqr": 0.0003342311236999194,
+                "ops": 3007.6361461810843,
+                "total": 0.0016624351340998145,
+                "data": [
+                    0.00033330505899994024,
+                    0.00033386105339995993,
+                    0.0003342311236999194,
+                    0.0003304209308999816,
+                    0.0003306169671000134
+                ],
+                "iterations": 10000
+            }
+        },
+        {
+            "group": "twitter.json.xz deserialization",
+            "name": "rapidjson 1.6 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-rapidjson-twitter.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "rapidjson",
+                "fixture": "twitter.json.xz"
+            },
+            "param": "bytes-rapidjson-twitter.json.xz",
+            "extra_info": {
+                "lib": "rapidjson",
+                "version": "1.6"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.004652717183999812,
+                "max": 0.00480392602899974,
+                "mean": 0.004718880320999961,
+                "stddev": 5.729747611995755e-05,
+                "rounds": 5,
+                "median": 0.004724536521999653,
+                "iqr": 7.436964025032446e-05,
+                "q1": 0.004674853782750006,
+                "q3": 0.00474922342300033,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.004652717183999812,
+                "hd15iqr": 0.00480392602899974,
+                "ops": 211.91467720632795,
+                "total": 0.023594401604999805,
+                "data": [
+                    0.004652717183999812,
+                    0.00468223264900007,
+                    0.004724536521999653,
+                    0.0047309892210005275,
+                    0.00480392602899974
+                ],
+                "iterations": 1000
+            }
+        },
+        {
+            "group": "canada.json.xz deserialization",
+            "name": "ujson 5.2.0 to bytes",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[bytes-ujson-canada.json.xz]",
+            "params": {
+                "dump_to": "bytes",
+                "library": "ujson",
+                "fixture": "canada.json.xz"
+            },
+            "param": "bytes-ujson-canada.json.xz",
+            "extra_info": {
+                "lib": "ujson",
+                "version": "5.2.0"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.019646674750001692,
+                "max": 0.019702634699997362,
+                "mean": 0.019680384764002155,
+                "stddev": 2.0543414004844743e-05,
+                "rounds": 5,
+                "median": 0.019684649060000083,
+                "iqr": 1.775926999698571e-05,
+                "q1": 0.019672771037505754,
+                "q3": 0.01969053030750274,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.019646674750001692,
+                "hd15iqr": 0.019702634699997362,
+                "ops": 50.81201470355005,
+                "total": 0.09840192382001078,
+                "data": [
+                    0.01968146980000711,
+                    0.019702634699997362,
+                    0.019646674750001692,
+                    0.019684649060000083,
+                    0.019686495510004533
+                ],
+                "iterations": 100
+            }
+        },
+        {
+            "group": "canada.json.xz deserialization",
+            "name": "orjson 3.6.8 to string",
+            "fullname": "orjson_benchmark/benchmark_latency.py::test_loads[string-orjson-canada.json.xz]",
+            "params": {
+                "dump_to": "string",
+                "library": "orjson",
+                "fixture": "canada.json.xz"
+            },
+            "param": "string-orjson-canada.json.xz",
+            "extra_info": {
+                "lib": "orjson",
+                "version": "3.6.8"
+            },
+            "options": {
+                "disable_gc": true,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 5.0,
+                "min_time": 1.0,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.014159673879994443,
+                "max": 0.014280634369997642,
+                "mean": 0.014206771215996923,
+                "stddev": 4.682773040773145e-05,
+                "rounds": 5,
+                "median": 0.014196366689993738,
+                "iqr": 6.126004749830959e-05,
+                "q1": 0.014173351434999404,
+                "q3": 0.014234611482497713,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.014159673879994443,
+                "hd15iqr": 0.014280634369997642,
+                "ops": 70.38897049837708,
+                "total": 0.07103385607998461,
+                "data": [
+                    0.014219270519997735,
+                    0.014196366689993738,
+                    0.014280634369997642,
+                    0.014177910620001058,
+                    0.014159673879994443
+                ],
+                "iterations": 100
+            }
+        }
+    ],
+    "datetime": "2022-05-07T15:28:49.406502",
+    "version": "3.4.1"
+}

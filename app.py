@@ -1,7 +1,6 @@
 import streamlit as st
 import requests, zipfile, io
 from pathlib import Path
-import base64
 from functools import lru_cache
 import pandas as pd
 import plotly.express as px
@@ -10,7 +9,7 @@ import plotly.express as px
 
 @lru_cache(maxsize=4)
 def download_content(url: str, dir: Path):
-    r = requests.get(os_dict[selected_os])
+    r = requests.get(url)
     z = zipfile.ZipFile(io.BytesIO(r.content))
     z.extractall(dir)
 
@@ -23,14 +22,16 @@ os_dict = {
 }
 
 st.set_page_config(layout="wide")
-st.markdown(Path("./README.md").read_text())
+st.title("Orjson Benchmark Visualizer")
 
 with st.sidebar:
     selected_os = st.selectbox("Choose OS", os_dict.keys())
 
-    download_content(selected_os, tmp_dir)
+    download_content(os_dict[selected_os], tmp_dir)
 
     benchmarks = list(filter(Path.is_dir, tmp_dir.glob("*/**")))
+    benchmarks.remove(Path("benchmarks/latency"))
+    benchmarks.remove(Path("benchmarks/types"))
     selected_benchmark = st.selectbox("Choose benchmark", benchmarks)
 
     results = list(filter(Path.is_file, Path(selected_benchmark).glob("*.json")))
@@ -38,17 +39,7 @@ with st.sidebar:
     results = [result.name for result in results]
     selected_result = st.selectbox("Choose result", results)
 
-if Path(selected_result).suffix == ".svg":
-    with open(Path(selected_benchmark) / Path(selected_result), "r") as file:
-        svg_string = file.read()
-        b64 = base64.b64encode(svg_string.encode("utf-8")).decode("utf-8")
-        css = '<p style="text-align:center; display: flex; justify-content: center;">'
-        html = r'{}<img src="data:image/svg+xml;base64,{}"/>'.format(
-            css, b64
-        )
-        st.write(html, unsafe_allow_html=True)
-
-elif Path(selected_result).suffix == ".json":
+if Path(selected_result).suffix == ".json":
     data_frame = pd.read_json(Path(selected_benchmark) / Path(selected_result), typ="series")
     data_frame = pd.json_normalize(data_frame.benchmarks)
     data_frame = data_frame.explode("stats.data")
@@ -64,4 +55,4 @@ elif Path(selected_result).suffix == ".rst":
             st.text(line)
 
 else:
-    st.text("Unkown optin")
+    st.text("Unkown option")
